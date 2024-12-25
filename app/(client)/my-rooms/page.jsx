@@ -20,7 +20,9 @@ const MyRooms = () => {
     const fetchRooms = async () => {
       const response = await fetch(`/api/users/${session?.user.id}/rooms`);
       const data = await response.json();
-      setMyRooms(data);
+      // data.sort((a, b) => new Date(b.dbEntryTime) - new Date(a.dbEntryTime));
+
+      setMyRooms(data.sort((a, b) => new Date(b.createdAt) - new Date(a.createdAt)));
     };
     if (session?.user.id) fetchRooms();
   }, [session?.user.id]);

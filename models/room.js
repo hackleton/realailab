@@ -16,6 +16,14 @@ const RoomSchema = new Schema({
     type: String,
     required: [true, "generated photo is required"],
   },
+  createdAt: {
+    type: Date,
+    default: Date.now,
+  },
+  updatedAt: {
+    type: Date,
+    default: Date.now,
+  },
 });
 
 const Room = models.Room || model("Room", RoomSchema);

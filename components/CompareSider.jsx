@@ -10,7 +10,7 @@ export const CompareSlider = ({ original, generatedPhoto }) => {
       itemTwo={
         <ReactCompareSliderImage src={generatedPhoto} alt="generated photo" />
       }
-      portrait
+      portrait={false}
       className="flex w-[600px] mt-5 h-96"
     />
   );
