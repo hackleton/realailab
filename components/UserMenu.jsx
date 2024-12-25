@@ -7,7 +7,7 @@ import { signIn, signOut, useSession, getProviders } from "next-auth/react";
 const UserMenu = () => {
   const [toggleDropdown, setToggleDropdown] = useState(false);
   const { data: session } = useSession();
-  const [providers, setProviders] = useState(null);
+  const [providers, setProviders] = useState([]);
 
   useEffect(() => {
     const setUpProviders = async () => {
@@ -78,19 +78,16 @@ const UserMenu = () => {
           </div>
         </div>
       ) : (
-        <>
-          {providers &&
-            Object.values(providers).map((provider) => (
-              <button
-                type="button"
-                key={provider.name}
-                onClick={() => signIn(provider.id, { callbackUrl: "/" })}
-                className="black_btn"
-              >
-                Sign In
-              </button>
-            ))}
-        </>
+        Object.values(providers).map((provider) => (
+          <button
+            type="button"
+            key={provider?.name}
+            onClick={() => signIn(provider?.id, { callbackUrl: "/" })}
+            className="black_btn"
+          >
+            Sign In
+          </button>
+        ))
       )}
     </div>
   );
