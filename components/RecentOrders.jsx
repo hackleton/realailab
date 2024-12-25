@@ -18,7 +18,7 @@ const RecentOrders = async () => {
             </div>
             <div className="pl-4">
               <p className="text-gray-800 font-bold">${order.price}</p>
-              <p className="text-gray-500 text-sm">{order.customer.username}</p>
+              <p className="text-gray-500 text-sm">{order.userId.username}</p>
             </div>
             <p className="lg:flex md:hidden absolute right-6 text-sm">
               {order.formattedDate}

@@ -32,7 +32,7 @@ items-center justify-between cursor-pointer"
                   <div className="pl-4">
                     <p className="text-gray-800 font-bold">${order.price}</p>
                     <p className="text-gray-800 text-sm">
-                      {order.customer.username}
+                      {order.userId.username}
                     </p>
                   </div>
                 </div>

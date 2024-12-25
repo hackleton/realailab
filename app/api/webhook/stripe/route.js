@@ -32,7 +32,7 @@ export const POST = async (req) => {
       const credits = paymentIntent.metadata.credits;
       await connectToDB();
       await Order.create({
-        customer: userId,
+        userId: userId,
         status: "success",
         method: paymentIntent.payment_method_types[0],
         price: paymentIntent.amount > 0 ? paymentIntent.amount / 100 : 0,

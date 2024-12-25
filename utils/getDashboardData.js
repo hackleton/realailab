@@ -61,7 +61,7 @@ export const getGraphData = async () => {
 export const getRecentOrders = async () => {
   await connectToDB();
   const recentOrders = await Order.find({})
-    .populate("customer")
+    .populate("userId")
     .sort({ createdAt: -1 })
     .limit(10);
   recentOrders.forEach((order) => {
@@ -74,7 +74,7 @@ export const getRecentOrders = async () => {
 export const getOrders = async () => {
   await connectToDB();
   const orders = await Order.find({})
-    .populate("customer")
+    .populate("userId")
     .sort({ createdAt: -1 });
   orders.forEach((order) => {
     const formattedDate = timeAgo(order.createdAt);
