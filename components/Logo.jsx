@@ -6,7 +6,7 @@ const Logo = () => {
     <div className="flex justify-center items-center">
       <Link href="/">
         <p className="font-bold text-xl text-black tracking-wide">
-          ReDesign AI
+          Dcrafty
         </p>
       </Link>
     </div>

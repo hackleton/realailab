@@ -2,12 +2,12 @@ import nodemailer from "nodemailer";
 
 export const sendEmail = async (to, subject, text) => {
   const transporter = nodemailer.createTransport({
-    host: "", // Replace with the SES SMTP endpoint for your region
+    host: "email-smtp.eu-north-1.amazonaws.com", // Replace with the SES SMTP endpoint for your region
     port: 587,
     secure: false, // Set to true if you are using port 465 with SSL
     auth: {
-      user: "",
-      pass: "",
+      user: "Sarah",
+      pass: "vUuS3[&N",
     },
   });
 

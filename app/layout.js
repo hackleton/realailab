@@ -7,9 +7,9 @@ import ToasterProvider from "../components/ToasterProvider";
 const font = Nunito({ subsets: ["latin"] });
 
 export const metadata = {
-  title: "ReDesignsAI - Instant Interior & Exterior Decoration with AI",
+  title: "Dcrafty - Instant ai interior design and ai exterior design generator",
   description:
-    "Use AI to generate interiors, exteriors and gardens with AI in less than 30 seconds.",
+    "Use the best AI interiors and exteriors generator with AI instantly.",
 };
 
 export default function RootLayout({ children }) {
