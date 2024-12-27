@@ -9,6 +9,7 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@bytescale/upload-widget": "^4.27.0",
     "@bytescale/upload-widget-react": "^4.10.0",
     "@headlessui/react": "^1.7.17",
     "@heroicons/react": "^2.0.18",

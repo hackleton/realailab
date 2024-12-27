@@ -82,7 +82,7 @@ const UserMenu = () => {
           <button
             type="button"
             key={provider?.name}
-            onClick={() => signIn(provider?.id, { callbackUrl: "/" })}
+            onClick={() => signIn(provider?.id, { callbackUrl: "/generate" })}
             className="black_btn"
           >
             Sign In

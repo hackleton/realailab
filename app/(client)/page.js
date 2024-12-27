@@ -1,6 +1,20 @@
+"use client";
+import { useRouter } from "next/navigation";
+import { useSession, signIn } from "next-auth/react";
 import Image from "next/image";
 
 export default function Home() {
+  const { data: session } = useSession();
+  const router = useRouter();
+  
+  const handleClick = () => {
+    if (session?.user) {
+      router.push("/generate");
+    } else {
+      // Directly trigger Google sign-in
+      signIn("google", { callbackUrl: "/generate" });
+    }
+  };
   return (
     <div>
       <div className="grid lg:grid-cols-12 mx-auto px-4 py-8 max-w-screen-xl lg:py-16">
@@ -18,9 +32,13 @@ export default function Home() {
               Reimagine Any Home Interior, Exterior, or Garden using AI.
             </strong>
           </p>
-          <button type="button" className="mt-8 black_btn">
-            Redesign Now
-          </button>
+          <button
+      type="button"
+      className="mt-8 black_btn"
+      onClick={handleClick}
+    >
+      Start for free
+    </button>
         </div>
         <div className="mt-8 lg:mt-0 lg:col-span-5">
           <video
