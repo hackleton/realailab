@@ -18,7 +18,7 @@ const GenerateRoom = () => {
   const [generatedPhoto, setGeneratedPhoto] = useState(null);
   const [photoName, setPhotoName] = useState(null);
   const [generatedPhotoLoaded, setGeneratedPhotoLoaded] = useState(false);
-  const [sideBySide, setSideBySide] = useState(false);
+  const [sideBySide, setSideBySide] = useState(true);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState(null);
 

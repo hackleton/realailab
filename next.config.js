@@ -6,6 +6,7 @@ const nextConfig = {
       "upcdn.io",
       "pbxt.replicate.delivery",
       "replicate.delivery",
+      "images.unsplash.com"
     ],
   },
 };
