@@ -1,4 +1,5 @@
 import DropDown from "./DropDown";
+import Link from "next/link";
 
 export const RoomSettings = ({ theme, setTheme, room, setRoom, themes, rooms, hasCredits }) => (
   <section className="w-full max-w-sm mx-auto mb-12">
