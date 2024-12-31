@@ -19,7 +19,7 @@
     "mongodb": "^6.1.0",
     "mongoose": "^7.5.2",
     "next": "14.0.1",
-    "next-auth": "^4.24.4",
+    "next-auth": "^4.24.11",
     "nodemailer": "^6.9.6",
     "postcss": "8.4.30",
     "razorpay": "^2.9.5",
