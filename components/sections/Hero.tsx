@@ -64,7 +64,7 @@ export default function Hero() {
             </Link> */}
           </div>
           
-          <div className="grid grid-cols-3 gap-4 stagger-animation">
+          {/* <div className="grid grid-cols-3 gap-4 stagger-animation">
             {[
               "photo-1616486338812-3dadae4b4ace",
               "photo-1616137466211-f939a420be84",
@@ -79,17 +79,20 @@ export default function Hero() {
                 />
               </div>
             ))}
-          </div>
+          </div> */}
         </div>
         
-        <div className="relative aspect-square lg:aspect-auto lg:h-[600px] animate-on-scroll opacity-0">
-          <Image
-            src="https://images.unsplash.com/photo-1616486338812-3dadae4b4ace"
-            alt="Modern interior design showcase"
-            fill
-            className="object-cover rounded-lg"
-            priority
-          />
+        <div className="space-y-5">
+        <video
+            className="rounded-lg"
+            loop={true}
+            autoPlay={true}
+            muted
+            controls
+          >
+            {" "}
+            <source src="/hero-video.mp4" />
+          </video>
         </div>
       </div>
     </section>

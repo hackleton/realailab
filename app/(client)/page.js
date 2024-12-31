@@ -22,7 +22,7 @@ export default function Home() {
     <>
       <main className="w-full overflow-x-hidden">
         <Hero />
-        <VideoSection />
+        {/* <VideoSection /> */}
         <Stats />
         <BeforeAfter />
         {/* <Gallery /> */}
