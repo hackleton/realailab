@@ -13,6 +13,7 @@ export const authOptions = {
   ],
   callbacks: {
     async session({ session }) {
+      try{
       // update session.
       console.log("session", session);
       await connectToDB();
@@ -23,6 +24,11 @@ export const authOptions = {
       session.user.credits = sessionUser.credits;
       session.user.role = sessionUser.role;
       return session;
+    }
+    catch(err){
+      console.error("Error during JWT callback:", err);
+      throw Error("Error during JWT callback");
+    }
     },
     async signIn({ profile }) {
       // check if a user already exists
@@ -51,12 +57,14 @@ export const authOptions = {
           <p>Feel free to explore all the features and resources available on our website. If you have any questions or need assistance, don't hesitate to reach out to our support team.</p>
           <p>Once again, welcome aboard, and we look forward to serving you.</p>
           <p>Best regards,</p>
-          <p>The Resigns AI Team</p>
+          <p>The Dcrafty AI Team</p>
         `;
           await sendEmail(email, subject, text);
         }
         return true;
-      } catch (error) {}
+      } catch (error) {
+      throw Error("Error during signin callback");
+      }
       console.log(error);
       return false;
     },

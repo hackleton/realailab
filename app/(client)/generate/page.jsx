@@ -18,7 +18,7 @@ const GenerateRoom = () => {
   const [generatedPhoto, setGeneratedPhoto] = useState(null);
   const [photoName, setPhotoName] = useState(null);
   const [generatedPhotoLoaded, setGeneratedPhotoLoaded] = useState(false);
-  const [sideBySide, setSideBySide] = useState(true);
+  const [sideBySide, setSideBySide] = useState(false);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState(null);
 
@@ -81,8 +81,8 @@ const GenerateRoom = () => {
   if (!session) return null;
 
   return (
-    <div className="max-w-7xl mx-auto my-8 px-4 mt-20 flex flex-col items-center">
-      <section className="text-center mb-10">
+    <div className="max-w-7xl mx-auto my-5 px-4 mt-20 flex flex-col items-center">
+      <section className="text-center mb-5">
         <h1 className="font-bold text-black text-5xl">
           Generate your dream room
         </h1>
@@ -99,21 +99,21 @@ const GenerateRoom = () => {
           hasCredits={session?.user.credits > 0}
         />
       )}
-
+      {!generatedPhoto && (
+  <PhotoUploader
+    originalPhoto={originalPhoto}
+    onPhotoUpload={handlePhotoUpload}
+    onDelete={handleDelete}
+    hasCredits={session?.user.credits > 0}
+  />
+)}
       {generatedPhoto && (
         <div>
           Here's your remodeled <b>{room.toLowerCase()}</b> in the{" "}
           <b>{theme.toLowerCase()}</b> theme!
         </div>
       )}
-
-      <PhotoUploader
-        originalPhoto={originalPhoto}
-        onPhotoUpload={handlePhotoUpload}
-        onDelete={handleDelete}
-        hasCredits={session?.user.credits > 0}
-      />
-
+     
       <PhotoComparison
         originalPhoto={originalPhoto}
         generatedPhoto={generatedPhoto}

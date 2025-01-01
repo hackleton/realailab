@@ -14,11 +14,13 @@ export const PhotoComparison = ({
   if (sideBySide) {
     return (
       <>
+      <div className="flex justify-center mb-6">
         <Toggle
-          className="visible mb-6"
+          className="visible my-5"
           sideBySide={sideBySide}
           setSideBySide={setSideBySide}
         />
+        </div>
         <CompareSlider
           original={originalPhoto}
           generatedPhoto={generatedPhoto}
@@ -28,6 +30,14 @@ export const PhotoComparison = ({
   }
 
   return (
+    <div>
+      <div className="flex justify-center my-5">
+    <Toggle
+          className="visible mb-6"
+          sideBySide={sideBySide}
+          setSideBySide={setSideBySide}
+        />
+        </div>
     <div className="flex sm:space-x-4 sm:flex-row flex-col text-center">
       <div>
         <h2 className="mb-5 font-medium text-lg">Original Room</h2>
@@ -50,6 +60,7 @@ export const PhotoComparison = ({
           onLoadingComplete={onLoadComplete}
         />
       </div>
+    </div>
     </div>
   );
 };

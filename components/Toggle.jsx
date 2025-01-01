@@ -10,7 +10,7 @@ export default function Toggle({ sideBySide, setSideBySide, ...props }) {
       <div className="flex items-center">
         <span
           className={`text-sm mr-3 font-medium ${
-            !sideBySide ? "text-white" : "text-gray-500"
+            !sideBySide ? "text-[#212121]" : "text-gray-500"
           }`}
         >
           Side by Side
@@ -19,7 +19,7 @@ export default function Toggle({ sideBySide, setSideBySide, ...props }) {
         <Switch
           checked={sideBySide}
           onChange={setSideBySide}
-          className={`${sideBySide ? "bg-blue-600" : "bg-gray-200"}
+          className={`${sideBySide ? "bg-[#FF5722]" : "bg-gray-200"}
           relative inline-flex h-6 w-11 shrink-0 cursor-pointer rounded-full border-2 border-transparent transition-colors duration-200 ease-in-out focus:outline-none`}
         >
           <span
@@ -33,7 +33,7 @@ export default function Toggle({ sideBySide, setSideBySide, ...props }) {
         <Switch.Label as="span" className="ml-3">
           <span
             className={`text-sm font-medium ${
-              sideBySide ? "text-white" : "text-gray-500"
+              sideBySide ? "text-[#212121]" : "text-gray-500"
             } `}
           >
             Compare
