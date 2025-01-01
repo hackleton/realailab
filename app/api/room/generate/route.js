@@ -46,7 +46,7 @@ export const POST = async (req) => {
     prompt:
       room === "Gaming Room"
         ? "a room for gaming with gaming computers, gaming consoles, and gaming chairs"
-        : `a ${theme.toLowerCase()} ${room.toLowerCase()} Editorial Style Photo, Symmetry, Straight On, Modern Living Room, Large Window, Leather, Glass, Metal, Wood Paneling, Neutral Palette, Ikea, Natural Light, Apartment, Afternoon, Serene, Contemporary, 4k`,
+        : `a ${theme.toLowerCase()} ${room.toLowerCase()} Editorial Style Photo, Symmetry, Straight On,golden ratio, Modern Living Room, Large Window, Leather, Glass, Metal, Wood Paneling, Ikea, Natural Light, Apartment, Afternoon, Serene, Contemporary, 4k`,
     a_prompt:
       "best quality, extremely detailed, photo from Pinterest, interior, cinematic photo, ultra-detailed, ultra-realistic, award-winning",
     n_prompt:
@@ -78,7 +78,7 @@ export const POST = async (req) => {
     </ul>
     <p>Thank you for using our service. If you have any questions or need further assistance, please feel free to contact us.</p>
     <p>Best regards,</p>
-    <p>Resigns AI Team</p>
+    <p>Dcrafty Team</p>
   `;
     await sendEmail(email, subject, text);
     await connectToDB();

@@ -1,3 +1,4 @@
+// Footer.js
 import Link from "next/link";
 import { Mail, Phone, MapPin, Instagram, Twitter, Facebook } from "lucide-react";
 
@@ -11,7 +12,7 @@ export default function Footer() {
           <div>
             <h3 className="text-2xl font-light mb-4">Transform</h3>
             <p className="text-gray-400 mb-4">
-              Creating beautiful, functional spaces that reflect your lifestyle and personality using ai.
+              Creating beautiful, functional spaces that reflect your lifestyle and personality using AI.
             </p>
             <div className="flex space-x-4">
               <Link href="#" className="hover:text-white transition-colors">
@@ -35,12 +36,6 @@ export default function Footer() {
                   prashanthravichandran1@gmail.com
                 </a>
               </div>
-              {/* <div className="flex items-center">
-                <Phone className="w-5 h-5 mr-2" />
-                <a href="tel:+1234567890" className="hover:text-white transition-colors">
-                  (123) 456-7890
-                </a>
-              </div> */}
               <div className="flex items-center">
                 <MapPin className="w-5 h-5 mr-2" />
                 <span>India</span>
@@ -49,19 +44,32 @@ export default function Footer() {
           </div>
           
           <div>
-            <h4 className="text-lg font-medium mb-4">Quick Links</h4>
-            <nav className="space-y-2">
-              {["Generate Room", "My rooms", "Blog"].map((item) => (
-                <Link
-                  key={item}
-                  href="#"
-                  className="block hover:text-white transition-colors"
-                >
-                  {item}
-                </Link>
-              ))}
-            </nav>
-          </div>
+  <h4 className="text-lg font-medium mb-4">Quick Links</h4>
+  <nav className="space-y-2">
+    {[
+      "Generate",
+      "My rooms",
+      "Blog",
+      "About Us",
+      "Privacy Policy",
+      "Terms & Conditions",
+      "Contact Us",
+      "Cancellation & Refund Policy",
+    ].map((item) => (
+      <Link
+        key={item}
+        href={`/${item
+          .toLowerCase()
+          .replace(/ & /g, "-and-")
+          .replace(/ /g, "-")}`}
+        className="block hover:text-white transition-colors"
+      >
+        {item}
+      </Link>
+    ))}
+  </nav>
+</div>
+      
         </div>
         
         <div className="mt-12 pt-8 border-t border-gray-800 text-center text-sm">

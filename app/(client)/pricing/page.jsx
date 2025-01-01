@@ -9,7 +9,7 @@ import { handlePayment } from "./checkout.jsx";
 const pricingPlans = [
   {
     title: "Standard Plan",
-    price: 500,
+    price: 199,
     credits: 25,
     description: "20 Credits",
     features: [
@@ -21,7 +21,7 @@ const pricingPlans = [
   },
   {
     title: "Professional Plan",
-    price: 1000,
+    price: 499,
     credits: 60,
     description: "50 Credits",
     features: [
@@ -33,8 +33,8 @@ const pricingPlans = [
   },
   {
     title: "Enterprise Plan",
-    price: 2000,
-    credits: 100,
+    price: 999,
+    credits: 150,
     description: "100 Credits",
     features: [
       "Individual configuration",

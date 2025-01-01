@@ -2,6 +2,7 @@ import React from "react";
 import Container from "./Container";
 import Logo from "./Logo";
 import UserMenu from "./UserMenu";
+import Link from "next/link";
 
 const Navbar = () => {
   return (
@@ -10,6 +11,13 @@ const Navbar = () => {
         <Container>
           <div className="flex justify-between item-center">
             <Logo />
+            <div className="flex space-x-6">
+              <Link href="/about-us">About Us</Link>
+              <Link href="/privacy-policy">Privacy Policy</Link>
+              <Link href="/terms-conditions">Terms & Conditions</Link>
+              <Link href="/cancellation-refund-policy">Cancellation & Refund Policy</Link>
+              <Link href="/contact-us">Contact Us</Link>
+            </div>
             <UserMenu />
           </div>
         </Container>

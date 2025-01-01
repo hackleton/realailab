@@ -6,8 +6,8 @@ export const sendEmail = async (to, subject, text) => {
     port: 587,
     secure: false, // Set to true if you are using port 465 with SSL
     auth: {
-      user: "Sarah",
-      pass: "vUuS3[&N",
+      user: "AKIA4HWJULRWGAQYL37H",
+      pass: "BNFoOC4CIER/4ZjQGd3P5kAqNi/HJfYykO8eYsDI+Z8K",
     },
   });
 

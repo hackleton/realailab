@@ -57,7 +57,7 @@ export const authOptions = {
           <p>Feel free to explore all the features and resources available on our website. If you have any questions or need assistance, don't hesitate to reach out to our support team.</p>
           <p>Once again, welcome aboard, and we look forward to serving you.</p>
           <p>Best regards,</p>
-          <p>The Dcrafty AI Team</p>
+          <p>Dcrafty Team</p>
         `;
           await sendEmail(email, subject, text);
         }
