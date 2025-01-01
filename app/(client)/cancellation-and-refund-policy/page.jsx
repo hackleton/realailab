@@ -15,7 +15,7 @@ const CancellationRefundPolicy = () => {
 
       <div className="mt-8">
         <h2 className="text-2xl font-semibold">Refunds</h2>
-        <p>Refund requests will be considered on a case-by-case basis. If you are dissatisfied with our services, please contact us within 7 days of your subscription to request a refund. Refunds will only be issued if the request meets our criteria, which include but are not limited to service quality issues.</p>
+        <p>Refund requests will be considered on a case-by-case basis. If you are dissatisfied with our services, please contact us within 7 days of your subscription to request a refund. Refunds will only be issued if the request meets our criteria, which include but are not limited to service quality issues. If eligible refund will be processed within 5-7 working days.</p>
       </div>
 
       <div className="mt-8">
