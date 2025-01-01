@@ -79,14 +79,17 @@ const UserMenu = () => {
         </div>
       ) : (
         Object.values(providers).map((provider) => (
-          <button
+          <div className="flex justify-center items-center gap-3">
+            <Link href="/pricing">
+            <p className="text-base font-medium">Pricing</p>
+          </Link><button
             type="button"
             key={provider?.name}
             onClick={() => signIn(provider?.id, { callbackUrl: "/generate" })}
             className="black_btn"
           >
-            Sign In
-          </button>
+              Sign In
+            </button></div>
         ))
       )}
     </div>
