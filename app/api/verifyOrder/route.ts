@@ -16,7 +16,7 @@ export async function POST(request: NextRequest) {
     const auth = Buffer.from(`${razorpayKeyId}:${razorpayKeySecret}`).toString('base64');
 
     const paymentResponse = await axios.get(
-      `https://api.razorpay.com/payments/${razorpayPaymentId}`,
+      `https://api.razorpay.com/v1/payments/${razorpayPaymentId}`,
       {
         headers: {
           'Authorization': `Basic ${auth}`
